@@ -1,0 +1,136 @@
+---
+title: "Estadística con RStudio"
+author: "Elías Aburto Camacllanqui"
+institute: "Universidad Nacional Mayor de San Marcos"
+date: "03/10/2023"
+output: 
+  xaringan::moon_reader:
+    css: [xaringan-themer.css, custom.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:11
+encoding: "UTF-8"
+---
+## Contenido
+
+1. **CAPÍTULO 1** 
+ * Probabilidad y variables aleatorias
+ * Modelos probabilísticos: Binomial y Normal
+ * Vectores aleatorios
+ 
+2. **CAPÍTULO 2**
+ * Muestra aleatoria y distribuciones muestrales
+ 
+3. **CAPÍTULO 3**
+ * Estimación: Métodos de estimación. Estimación puntual
+ * Estimación por intervalos de confianza
+ * Prueba de hipótesis
+ 
+3. **CAPÍTULO 4**
+ * Asociación: Covarianza y correlación
+ * Introducción a modelos de regresión
+ * Regresión lineal múltiple. Interpretación
+ * Predictores cualitativos
+ * Predicción y evaluación
+
+---
+class: inverse, center, middle
+# .font150[CAPITULO 1]
+
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+```{r xaringan-themer, warning=FALSE, include=FALSE}
+library(xaringanthemer)
+style_mono_accent(
+  base_color       =  "#2a9905",
+  padding          = "16px 50px 12px 50px",
+  code_font_google = google_font("Fira Mono")
+)
+```
+
+```{r xaringanExtra, echo=FALSE}
+#devtools::install_github("gadenbuie/xaringanExtra")
+library(xaringanExtra)
+xaringanExtra::use_xaringan_extra(c("tile_view", "tachyons", "panelset"))
+xaringanExtra::use_tile_view()
+xaringanExtra::use_editable()
+xaringanExtra::use_scribble()
+xaringanExtra::use_logo(
+  image_url ="imagenes/logo.png", 
+  link_url = "https://medicionpsicologica.com",
+  width = 120, 
+  height = 120
+  )
+xaringanExtra::use_clipboard(
+  button_text = "Copiar",
+  success_text = "Copiado",
+  error_text = "Presiona Ctrl+C para copiar"
+)
+xaringanExtra::use_fit_screen()
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,          #<<
+  mute_unhighlighted_code = FALSE  #<<
+)
+```
+
+---
+#Prob. 1
+
+
+
+---
+# Resolución del Prob.1
+
+.panelset[
+.panel[.panel-name[Manualmente]
+
+]
+
+.panel[.panel-name[En RStudio, paso 1]
+
+####1. 
+
+]
+
+
+.panel[.panel-name[En RStudio, paso 2]
+####2. 
+
+
+
+]
+]
+
+---
+class: inverse, center, middle
+# .font150[CAPITULO 2]
+
+---
+
+class: inverse, center, middle
+# .font150[CAPITULO 3]
+
+---
+class: inverse, center, middle
+# .font150[CAPITULO 4]
+
+---
+
+class: middle
+
+<br>
+<center>
+<h1>
+<span style="color:green">¡Gracias por su atención!</span>
+<h1>
+</center>
+<br>
+
+
