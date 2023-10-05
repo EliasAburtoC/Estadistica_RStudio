@@ -81,9 +81,17 @@ xaringanExtra::use_extra_styles(
 ```
 
 ---
-#Prob. 1
 
+###Calcule las siguientes probabilidades:
 
+####1. P(Z <= 1.18)
+####2. P(Z <= -1.31)
+####3. P(Z <= 0)
+####4. P(Z >= -0.33)
+####5. P(Z >= 1.64)
+####6. P(-1.96 <= Z <= 1.96)
+####7. P(0 <= Z <= 3.54)
+####8. P(Z < -4)
 
 ---
 # Resolución del Prob.1
@@ -91,22 +99,156 @@ xaringanExtra::use_extra_styles(
 .panelset[
 .panel[.panel-name[Manualmente]
 
+.pull-left[
+####1. Observamos que la probabilidad de obtener valores Z menores o iguales a 1.18 es igual a la probabilidad acumulada (F) hasta la puntuación Z igual a 1.18. Por lo tanto:
+
+```{r, out.width = "90%", echo = FALSE}
+knitr::include_graphics("Imagenes/0002.png", dpi = 600)
+```
+]
+
+
+.pull-right[
+
+####2. Buscamos la probabilidad acumulada (F) en la Tabla de distribución normal tipificada: N(0,1)
+```{r, out.width = "100%", echo = FALSE}
+knitr::include_graphics("Imagenes/0001.png", dpi = 600)
+```
+]
+
 ]
 
 .panel[.panel-name[En RStudio, paso 1]
 
-####1. 
+####1. Utilizar la función pnorm para obtener la probabilidad acumulada.
+
+```{r message = FALSE, warning = FALSE}
+
+pnorm(1.18)
+
+```
+
+]
 
 ]
 
 
-.panel[.panel-name[En RStudio, paso 2]
-####2. 
+---
+# Resolución del Prob.2
+
+.panelset[
+.panel[.panel-name[Manualmente]
+
+.pull-left[
+####1. Observamos que la probabilidad de obtener valores Z menores o iguales a -1.31 es igual a la probabilidad acumulada (F) hasta la puntuación Z igual a -1.31. Por lo tanto:
+
+```{r, out.width = "90%", echo = FALSE}
+knitr::include_graphics("Imagenes/0003.png", dpi = 600)
+```
+]
 
 
+.pull-right[
+
+####2. Buscamos la probabilidad acumulada (F) en la Tabla de distribución normal tipificada: N(0,1)
+```{r, out.width = "100%", echo = FALSE}
+knitr::include_graphics("Imagenes/0004.png", dpi = 600)
+```
+]
+
+]
+
+.panel[.panel-name[En RStudio, paso 1]
+
+####1. Utilizar la función pnorm para obtener la probabilidad acumulada.
+
+```{r message = FALSE, warning = FALSE}
+
+pnorm(-1.31)
+
+```
 
 ]
 ]
+
+---
+# Resolución del Prob.3
+
+.panelset[
+.panel[.panel-name[Manualmente]
+
+.pull-left[
+####1. Observamos que la probabilidad de obtener valores Z menores o iguales a 0 es igual a la probabilidad acumulada (F) hasta la puntuación Z igual a 0. Por lo tanto:
+
+```{r, out.width = "90%", echo = FALSE}
+knitr::include_graphics("Imagenes/0005.png", dpi = 600)
+```
+]
+
+
+.pull-right[
+
+####2. Buscamos la probabilidad acumulada (F) en la Tabla de distribución normal tipificada: N(0,1)
+```{r, out.width = "100%", echo = FALSE}
+knitr::include_graphics("Imagenes/0006.png", dpi = 600)
+```
+]
+]
+
+.panel[.panel-name[En RStudio, paso 1]
+
+####1. Utilizar la función pnorm para obtener la probabilidad acumulada.
+
+```{r message = FALSE, warning = FALSE}
+
+pnorm(0)
+
+```
+
+]
+]
+
+
+---
+# Resolución del Prob.4
+
+.panelset[
+.panel[.panel-name[Manualmente]
+
+.pull-left[
+####1. Observamos que la probabilidad de obtener valores Z mayores o iguales a -0.33 es igual a la probabilidad total (la cual es 1) menos la probabilidad acumulada (F) hasta la puntuación Z -0.33. Por lo tanto:
+
+```{r, out.width = "90%", echo = FALSE}
+knitr::include_graphics("Imagenes/0007.png", dpi = 600)
+```
+]
+
+
+.pull-right[
+
+####2. Buscamos la probabilidad acumulada (F) en la Tabla de distribución normal tipificada: N(0,1)
+```{r, out.width = "75%", echo = FALSE}
+knitr::include_graphics("Imagenes/0008.png", dpi = 600)
+```
+]
+
+]
+
+.panel[.panel-name[En RStudio, paso 1]
+
+####1. Utilizar la función pnorm para obtener la probabilidad acumulada.
+
+```{r message = FALSE, warning = FALSE}
+
+1 - pnorm(-0.33)
+
+```
+
+]
+]
+
+
+
 
 ---
 class: inverse, center, middle

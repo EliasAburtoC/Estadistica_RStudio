@@ -11,7 +11,7 @@
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x8ed41eb398b4bad87263412fe40809c","expires":14}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xbc6e3b8870949d89144881c391240dc","expires":14}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -115,9 +115,17 @@ top:1em;right:1em;
 </div>
 
 ---
-#Prob. 1
 
+###Calcule las siguientes probabilidades:
 
+####1. P(Z &lt;= 1.18)
+####2. P(Z &lt;= -1.31)
+####3. P(Z &lt;= 0)
+####4. P(Z &gt;= -0.33)
+####5. P(Z &gt;= 1.64)
+####6. P(-1.96 &lt;= Z &lt;= 1.96)
+####7. P(0 &lt;= Z &lt;= 3.54)
+####8. P(Z &lt; -4)
 
 ---
 # Resolución del Prob.1
@@ -125,22 +133,152 @@ top:1em;right:1em;
 .panelset[
 .panel[.panel-name[Manualmente]
 
+.pull-left[
+####1. Observamos que la probabilidad de obtener valores Z menores o iguales a 1.18 es igual a la probabilidad acumulada (F) hasta la puntuación Z igual a 1.18. Por lo tanto:
+
+&lt;img src="Imagenes/0002.png" width="90%" /&gt;
+]
+
+
+.pull-right[
+
+####2. Buscamos la probabilidad acumulada (F) en la Tabla de distribución normal tipificada: N(0,1)
+&lt;img src="Imagenes/0001.png" width="100%" /&gt;
+]
+
 ]
 
 .panel[.panel-name[En RStudio, paso 1]
 
-####1. 
+####1. Utilizar la función pnorm para obtener la probabilidad acumulada.
+
+
+```r
+pnorm(1.18)
+```
+
+```
+## [1] 0.8809999
+```
+
+]
 
 ]
 
 
-.panel[.panel-name[En RStudio, paso 2]
-####2. 
+---
+# Resolución del Prob.2
+
+.panelset[
+.panel[.panel-name[Manualmente]
+
+.pull-left[
+####1. Observamos que la probabilidad de obtener valores Z menores o iguales a -1.31 es igual a la probabilidad acumulada (F) hasta la puntuación Z igual a -1.31. Por lo tanto:
+
+&lt;img src="Imagenes/0003.png" width="90%" /&gt;
+]
 
 
+.pull-right[
+
+####2. Buscamos la probabilidad acumulada (F) en la Tabla de distribución normal tipificada: N(0,1)
+&lt;img src="Imagenes/0004.png" width="100%" /&gt;
+]
+
+]
+
+.panel[.panel-name[En RStudio, paso 1]
+
+####1. Utilizar la función pnorm para obtener la probabilidad acumulada.
+
+
+```r
+pnorm(-1.31)
+```
+
+```
+## [1] 0.09509792
+```
 
 ]
 ]
+
+---
+# Resolución del Prob.3
+
+.panelset[
+.panel[.panel-name[Manualmente]
+
+.pull-left[
+####1. Observamos que la probabilidad de obtener valores Z menores o iguales a 0 es igual a la probabilidad acumulada (F) hasta la puntuación Z igual a 0. Por lo tanto:
+
+&lt;img src="Imagenes/0005.png" width="90%" /&gt;
+]
+
+
+.pull-right[
+
+####2. Buscamos la probabilidad acumulada (F) en la Tabla de distribución normal tipificada: N(0,1)
+&lt;img src="Imagenes/0006.png" width="100%" /&gt;
+]
+]
+
+.panel[.panel-name[En RStudio, paso 1]
+
+####1. Utilizar la función pnorm para obtener la probabilidad acumulada.
+
+
+```r
+pnorm(0)
+```
+
+```
+## [1] 0.5
+```
+
+]
+]
+
+
+---
+# Resolución del Prob.4
+
+.panelset[
+.panel[.panel-name[Manualmente]
+
+.pull-left[
+####1. Observamos que la probabilidad de obtener valores Z mayores o iguales a -0.33 es igual a la probabilidad total (la cual es 1) menos la probabilidad acumulada (F) hasta la puntuación Z -0.33. Por lo tanto:
+
+&lt;img src="Imagenes/0007.png" width="90%" /&gt;
+]
+
+
+.pull-right[
+
+####2. Buscamos la probabilidad acumulada (F) en la Tabla de distribución normal tipificada: N(0,1)
+&lt;img src="Imagenes/0008.png" width="75%" /&gt;
+]
+
+]
+
+.panel[.panel-name[En RStudio, paso 1]
+
+####1. Utilizar la función pnorm para obtener la probabilidad acumulada.
+
+
+```r
+1 - pnorm(-0.33)
+```
+
+```
+## [1] 0.6293
+```
+
+]
+]
+
+
+
 
 ---
 class: inverse, center, middle
