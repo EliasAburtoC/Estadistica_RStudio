@@ -38,8 +38,7 @@ encoding: "UTF-8"
 
 ---
 class: inverse, center, middle
-# .font150[CAPITULO 1]
-
+# .font150[CAPITULO 1 y 2]
 
 
 ```{r setup, include=FALSE}
@@ -81,6 +80,7 @@ xaringanExtra::use_extra_styles(
 ```
 
 ---
+##Ejercicios de los Capítulos 1 y 2
 
 ###Calcule las siguientes probabilidades:
 
@@ -129,7 +129,6 @@ pnorm(1.18)
 ```
 
 ]
-
 ]
 
 
@@ -248,16 +247,76 @@ knitr::include_graphics("Imagenes/0008.png", dpi = 600)
 ]
 
 
-
-
----
-class: inverse, center, middle
-# .font150[CAPITULO 2]
-
 ---
 
 class: inverse, center, middle
 # .font150[CAPITULO 3]
+
+---
+
+##Ejercicios del Capítulo 3
+
+####Prob. 1. Como resultado de estudios estadísticos sobre los tiempos de atención por paciente, en una clínica dental se concluyó que dichos tiempos tiene distribución normal con promedio 80 minutos. Al seleccionar una muestra aleatoria de 12 pacientes que hicieron uso del servicio médico en esta clínica, se encontró los siguientes resultados en minutos: 86, 60, 55, 92, 80, 110, 70, 68, 75, 85, 79, 85. ¿Con un nivel de confianza del 98% se puede respaldar estadísticamente la información proporcionada?
+
+
+---
+# Resolución del Prob.1
+
+.panelset[
+.panel[.panel-name[En RStudio, paso 1]
+
+
+
+####1. Primero debemos calcular la media y desviación estandar de los datos muestrales mencionados. Luego definiremos el número de muestra (12) y el valor alfa a partir del nivel de confianza.
+
+```{r message = FALSE, warning = FALSE}
+
+media_muestral_A <- mean(c(86, 60, 55,92, 80, 110, 70, 68, 75, 85, 79, 85))
+desv_est_A <- sd(c(86, 60, 55,92, 80, 110, 70, 68, 75, 85, 79, 85))
+nA <- 12
+nivel_conf <- 0.98 
+alpha <- (1 - nivel_conf)
+
+```
+
+]
+
+.panel[.panel-name[En RStudio, paso 2]
+
+
+####2. Luego construímos los intervalos de confianza con las puntuaciones y determinamos si la media poblacional estimada (80) se encuentra dentro del intervalo. 
+
+```{r message = FALSE, warning = FALSE}
+
+#Construir intervalo de confianza.
+t <- qt(1-(alpha/2), df= nA-1)
+
+# Hallar el valor Limite inferior
+LI_A <- media_muestral_A - t*(desv_est_A/sqrt(nA))
+# Hallar el valor Limite superior
+LS_A <- media_muestral_A + t*(desv_est_A/sqrt(nA))
+
+
+paste("El IC para la media de A es [",
+      round(LI_A,2),";",round(LS_A,2), "]")
+
+```
+
+
+]
+
+
+.panel[.panel-name[En RStudio, Interpretación y Conclusión]
+
+####Interpretación: Con el 98% de nivel de confianza se estima que el intervalo [67.14 ; 90.36] contenga el verdadero promedio de tiempo de atención por paciente de una clínica dental.
+
+####Conclusión: Debido a que el valor de 80 minutos se encuentra en el intervalo de confianza, entonces sí evidencia estadística para respaldar la afirmación proporcionada.
+
+
+]
+]
+
+
 
 ---
 class: inverse, center, middle
